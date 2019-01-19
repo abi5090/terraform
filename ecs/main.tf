@@ -112,7 +112,7 @@ resource "aws_alb_target_group" "lb_tg" {
     protocol            = "HTTP"
     matcher             = "200"
     timeout             = "5"
-    path                = "/"
+    path                = "${var.health_check_path}"
     unhealthy_threshold = "2"
   }
   tags = {
@@ -285,7 +285,7 @@ data "aws_route53_zone" "default" {
 resource "aws_route53_record" "default" {
   provider = "aws.${var.environment}"
   zone_id  = "${data.aws_route53_zone.default.zone_id}"
-  name     = "app.${var.hosted_zone["${var.environment}"]}"
+  name     = "${var.endpoint}.${var.hosted_zone["${var.environment}"]}"
   type     = "A"
   alias {
     name                   = "${aws_alb.lb.dns_name}"
