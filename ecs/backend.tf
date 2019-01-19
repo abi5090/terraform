@@ -8,4 +8,6 @@ terraform {
   }
 }
 
-# Terraform doesn't allow interpolation (yet) in the backend block. Please ensure to change the "key" to keep the state of different environments separate. Used "dev" as an example here.
+# Terraform doesn't allow interpolation (yet) in the backend block. 
+# Please ensure to change the "key" to keep the state of different environments separate.
+# Used "dev" as an example here.
