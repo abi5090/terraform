@@ -149,7 +149,7 @@ resource "aws_ecs_cluster" "app_cluster" {
 }
 
 data "template_file" "td_template" {
-  template = "${file("${path.module}/../templates/app-td.json.tpl")}"
+  template = "${file("${path.module}/templates/app-td.json.tpl")}"
 
   vars {
     app_image            = "${var.app_image}"
