@@ -152,13 +152,13 @@ data "template_file" "td_template" {
   template = "${file("${path.module}/../templates/app-td.json.tpl")}"
 
   vars {
-    app_image                       = "${var.app_image}"
-    aws_region                      = "${var.aws_region}"
-    app_port                        = "${var.app_port}"
-    app_env                         = "${var.environment}"
-    container_env_value             = "${var.container_env_value}" # Use this to pass any runtime value to your container
-                                                                # It allows to keep the docker image same across environments 
-                                                                # but also change certain values as per environment at runtime
+    app_image            = "${var.app_image}"
+    aws_region           = "${var.aws_region}"
+    app_port             = "${var.app_port}"
+    app_env              = "${var.environment}"
+    container_env_value  = "${var.container_env_value}" # Use this to pass any runtime value to your container
+                                                        # It allows to keep the docker image same across environments 
+                                                        # but also change certain values as per environment at runtime
   }
 }
 
@@ -190,7 +190,8 @@ resource "aws_ecs_service" "app_service" {
     container_name    = "app_container"
     container_port    = "${var.app_port}"
   }
-  health_check_grace_period_seconds  =  600
+  health_check_grace_period_seconds  =  600   # Delay this suitably to make sure the application comes up and ALB marks the 
+                                              # container healthy. 
   depends_on          = ["aws_alb_listener.lb_listen"]
 } ### ECS CLUSTER END ###
 
@@ -244,12 +245,10 @@ resource "aws_appautoscaling_policy" "app_up" {
   service_namespace  = "${aws_appautoscaling_target.app_scale_target.service_namespace}"
   resource_id        = "${aws_appautoscaling_target.app_scale_target.resource_id}"
   scalable_dimension = "${aws_appautoscaling_target.app_scale_target.scalable_dimension}"
-
   step_scaling_policy_configuration {
     adjustment_type         = "ChangeInCapacity"
     cooldown                = 60
     metric_aggregation_type = "Average"
-
     step_adjustment {
       metric_interval_lower_bound = 0
       scaling_adjustment          = 1
@@ -263,12 +262,10 @@ resource "aws_appautoscaling_policy" "app_down" {
   service_namespace  = "${aws_appautoscaling_target.app_scale_target.service_namespace}"
   resource_id        = "${aws_appautoscaling_target.app_scale_target.resource_id}"
   scalable_dimension = "${aws_appautoscaling_target.app_scale_target.scalable_dimension}"
-
   step_scaling_policy_configuration {
     adjustment_type         = "ChangeInCapacity"
     cooldown                = 300
     metric_aggregation_type = "Average"
-
     step_adjustment {
       metric_interval_upper_bound = 0
       scaling_adjustment          = -1
