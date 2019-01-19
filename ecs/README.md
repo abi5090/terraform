@@ -21,8 +21,12 @@ terraform apply
 ```
 Above would create a S3 backend and ECR repo - modify these values in the files under `ecr/` and execute
 ```
-cd base
+cd ecs
 terraform init
 terraform plan
 terraform apply
 ```
+
+Drop me anote or open an issue if something doesn't work out. 
+
+Cheers! 
