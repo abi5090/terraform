@@ -27,6 +27,6 @@ terraform plan
 terraform apply
 ```
 
-Drop me anote or open an issue if something doesn't work out. 
+Drop me a note or open an issue if something doesn't work out. 
 
-Cheers! 
+Cheers! :thumbsup:
