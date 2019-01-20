@@ -22,11 +22,11 @@ prod
 
 ## What is where?
 
-### [base](./base)
+### [Base](./base)
 To create a S3 bucket for use as Terraform remote backend. Execute this first, to setup the resources that are required for using the S3 backend. For details, please refer to the readme in the sub-directory.
 
-### [ecr](./ecr)
+### [AWS ECR](./ecr)
 To create an AWS ECR repo, for use with the AWS ECS cluster. For details, please refer to the readme in the sub-directory.
 
-### [ecs](./ecs)
+### [AWS ECS](./ecs)
 To create a ECS Fargate cluster with auto-scaling, application load balancer and other related resources. For details, please refer to the readme in the sub-directory.
