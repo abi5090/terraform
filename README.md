@@ -6,7 +6,7 @@ Configure AWS Cli access for all the AWS accounts you want to work with.
 
 Example for configuring `dev` account. Repeat similarly for `qa`, `prod`,`tools` accounts. 
 ```
-$ aws configure --profile aws-dev-account
+$ aws configure --profile dev
 AWS Access Key ID [None]: ACCESS_KEY
 AWS Secret Access Key [None]: SECRET_KEY
 Default region name [None]: us-east-1
