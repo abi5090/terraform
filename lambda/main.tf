@@ -1,3 +1,9 @@
+provider "aws" {
+    shared_credentials_file = "$HOME/.aws/credentials"
+    profile                 = "default"
+    region                  = "${var.aws_region}"
+}
+
 module "backup_lambda" {
    source              = "${path.module}../modules/lambda"
    function_name       = "${var.environment}_backup_lambda_function"
