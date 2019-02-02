@@ -1,9 +1,9 @@
 # Base
 
-![terraform](https://github.com/abiydv/ref-docs/blob/master/images/logos/terraform.png)
-![aws-cli](https://github.com/abiydv/ref-docs/blob/master/images/logos/aws-cli.png)
-![aws-kms](https://github.com/abiydv/ref-docs/blob/master/images/logos/aws-kms.png)
-![aws-s3](https://github.com/abiydv/ref-docs/blob/master/images/logos/aws-s3.png)
+![terraform](https://github.com/abiydv/ref-docs/blob/master/images/logos/terraform_small.png)
+![aws-cli](https://github.com/abiydv/ref-docs/blob/master/images/logos/aws-cli_small.png)
+![aws-kms](https://github.com/abiydv/ref-docs/blob/master/images/logos/aws-kms_small.png)
+![aws-s3](https://github.com/abiydv/ref-docs/blob/master/images/logos/aws-s3_small.png)
 
 Use this to initialize the basic resources to be used by Terraform. These are tracked separately from the main executions which use the remote backend and DB (for locking) created as part of this execution.
 
