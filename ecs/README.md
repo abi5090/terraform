@@ -1,13 +1,14 @@
 # AWS Elastic Container Service Cluster (Fargate)
 
-![terraform](https://github.com/abiydv/ref-docs/blob/master/images/logos/terraform.png)
-<br>Use this Terraform template to create a AWS ECS cluster (Fargate). Along with ECS, it also creates some other resources the ECS cluster needs, like - elastic load balancer, auto-scaling policies, cloudwatch alarms, route 53 entries etc.
+![terraform](https://github.com/abiydv/ref-docs/blob/master/images/logos/terraform_small.png)
+![elb](https://github.com/abiydv/ref-docs/blob/master/images/logos/aws-elb_small.png)
+![cw-alarm](https://github.com/abiydv/ref-docs/blob/master/images/logos/aws-cwalarm_small.png)
+![autoscaling](https://github.com/abiydv/ref-docs/blob/master/images/logos/aws-autoscaling_small.png)
+![ecs-fargate](https://github.com/abiydv/ref-docs/blob/master/images/logos/aws-ecs-fargate_small.png)
+![r53](https://github.com/abiydv/ref-docs/blob/master/images/logos/aws-r53_small.png)
 
-![elb](https://github.com/abiydv/ref-docs/blob/master/images/logos/aws-elb.png)
-![cw-alarm](https://github.com/abiydv/ref-docs/blob/master/images/logos/aws-cwalarm.png)
-![autoscaling](https://github.com/abiydv/ref-docs/blob/master/images/logos/aws-autoscaling.png)
-![ecs-fargate](https://github.com/abiydv/ref-docs/blob/master/images/logos/aws-ecs-fargate.png)
-![r53](https://github.com/abiydv/ref-docs/blob/master/images/logos/aws-r53.png)
+Use this Terraform template to create a AWS ECS cluster (Fargate). Along with ECS, it also creates some other resources the ECS cluster needs, like - elastic load balancer, auto-scaling policies, cloudwatch alarms, route 53 entries etc.
+
 
 ## Prerequisites
 While this module creates most of the resources ECS needs, there are a few resources it expects to exist.
