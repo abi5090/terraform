@@ -1,4 +1,4 @@
-# Terraform ![terraform](https://github.com/abiydv/ref-docs/blob/master/images/logos/terraform_small.png)
+# Terraform ![terraform](https://github.com/abiydv/ref-docs/blob/master/images/logos/terraform_logo.png)
 
  Terraform examples and modules
 
